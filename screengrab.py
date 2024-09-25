@@ -6,13 +6,10 @@ from tkinter.filedialog import *
 root = tk.Tk()
 
 # Add Tk widget title
-root.title("Screen Grab")
+root.title("Screen Grabber")
 
 # Add canvas
-canvas1 = tk.Canvas(root, width=300, height=300,)
-
-# Pack canvas
-canvas1.pack()
+canvas1 = tk.Canvas(root, width=300, height=300)
 
 # Define screenshot function
 def takeScreenshot():
@@ -31,7 +28,7 @@ myButton = tk.Button(text="Take Screenshot", command=takeScreenshot, font=10)
 # Create window
 canvas1.create_window(150,150,window=myButton)
 
-# Pack button
+# Pack canvas
 canvas1.pack(anchor="center")
 
 # Call Tk mainloop
