@@ -1,7 +1,4 @@
 import pyautogui
-
-import time
-
 import tkinter as tk
 from tkinter.filedialog import *
 
@@ -16,23 +13,14 @@ canvas1 = tk.Canvas(root, width=300, height=300)
 
 # Define screenshot function
 def takeScreenshot():
-    # Hide root window
-    root.withdraw()
-
-    # Delay for root window to hide
-    time.sleep(0.2)
-
     # Take screenshot
     myscreenshot = pyautogui.screenshot()
 
     # Get screenshot name
-    save_path = asksaveasfilename(title="Save screenshot")
+    save_path = asksaveasfilename()
 
     # Save screenshot
     myscreenshot.save(save_path+"_screenshot.png")
-
-    # Show root window
-    root.deiconify()
 
 # Add button
 myButton = tk.Button(text="Take Screenshot", command=takeScreenshot, font=10)
