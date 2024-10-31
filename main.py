@@ -38,9 +38,11 @@ def takeScreenshot(root):
 
     # Get screenshot name
     save_path = asksaveasfilename(title="Select Images", filetypes=[("Image files", "*.png;*.jpg;*.jpeg")])
-
-    # Save screenshot
-    myscreenshot.save(save_path+"_screenshot.png")
+    
+    # Check if user cancelled dialog
+    if (save_path):
+        # Save screenshot
+        myscreenshot.save(save_path+"_screenshot.png")
 
     # Unhide window
     root.deiconify()
