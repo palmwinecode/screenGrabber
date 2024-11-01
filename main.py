@@ -31,7 +31,7 @@ def takeScreenshot(root):
     root.withdraw()
 
     # Delay for window to hide
-    time.sleep(0.1)
+    time.sleep(0.2)
 
     # Take screenshot
     myscreenshot = pyautogui.screenshot()
